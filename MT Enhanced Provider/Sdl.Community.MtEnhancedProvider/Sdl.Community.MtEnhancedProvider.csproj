@@ -130,29 +130,44 @@
     <Reference Include="PresentationFramework">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="Sdl.Core.Globalization">
+    <Reference Include="Sdl.Core.Globalization" Condition="('$(Configuration)'=='debug' Or '$(Configuration)'=='release')" >
       <HintPath>C:\Program Files (x86)\SDL\SDL Trados Studio\Studio4\Sdl.Core.Globalization.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sdl.Core.PluginFramework, Version=1.8.0.0, Culture=neutral, PublicKeyToken=c28cdb26c445c888, processorArchitecture=MSIL">
+    <Reference Include="Sdl.Core.Globalization" Condition="('$(Configuration)'!='debug' And '$(Configuration)'!='release')" >
+      <HintPath>SDL_references\Sdl.Core.Globalization.dll</HintPath>
+    </Reference>
+    <Reference Include="Sdl.Core.PluginFramework, Version=1.8.0.0, Culture=neutral, PublicKeyToken=c28cdb26c445c888, processorArchitecture=MSIL" Condition="('$(Configuration)'=='debug' Or '$(Configuration)'=='release')">
       <HintPath>..\packages\Sdl.Core.PluginFramework.1.8.0\lib\net45\Sdl.Core.PluginFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sdl.Core.PluginFramework.PackageSupport, Version=1.8.0.0, Culture=neutral, PublicKeyToken=c28cdb26c445c888, processorArchitecture=MSIL">
+    <Reference Include="Sdl.Core.PluginFramework.PackageSupport, Version=1.8.0.0, Culture=neutral, PublicKeyToken=c28cdb26c445c888, processorArchitecture=MSIL" Condition="('$(Configuration)'=='debug' Or '$(Configuration)'=='release')">
       <HintPath>..\packages\Sdl.Core.PluginFramework.1.8.0\lib\net45\Sdl.Core.PluginFramework.PackageSupport.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sdl.LanguagePlatform.Core">
+    <Reference Include="Sdl.Core.PluginFramework" Condition="('$(Configuration)'!='debug' And '$(Configuration)'!='release')">
+      <HintPath>SDL_references\Sdl.Core.PluginFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Sdl.LanguagePlatform.Core" Condition="('$(Configuration)'=='debug' Or '$(Configuration)'=='release')" >
       <HintPath>C:\Program Files (x86)\SDL\SDL Trados Studio\Studio4\Sdl.LanguagePlatform.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sdl.LanguagePlatform.TranslationMemory">
+    <Reference Include="Sdl.LanguagePlatform.Core" Condition="('$(Configuration)'!='debug' And '$(Configuration)'!='release')" >
+      <HintPath>SDL_references\Sdl.LanguagePlatform.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Sdl.LanguagePlatform.TranslationMemory" Condition="('$(Configuration)'=='debug' Or '$(Configuration)'=='release')" >
       <HintPath>C:\Program Files (x86)\SDL\SDL Trados Studio\Studio4\Sdl.LanguagePlatform.TranslationMemory.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sdl.LanguagePlatform.TranslationMemoryApi">
+    <Reference Include="Sdl.LanguagePlatform.TranslationMemory" Condition="('$(Configuration)'!='debug' And '$(Configuration)'!='release')" >
+      <HintPath>SDL_references\Sdl.LanguagePlatform.TranslationMemory.dll</HintPath>
+    </Reference>
+    <Reference Include="Sdl.LanguagePlatform.TranslationMemoryApi" Condition="('$(Configuration)'=='debug' Or '$(Configuration)'=='release')" >
       <HintPath>C:\Program Files (x86)\SDL\SDL Trados Studio\Studio4\Sdl.LanguagePlatform.TranslationMemoryApi.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="Sdl.LanguagePlatform.TranslationMemoryApi" Condition="('$(Configuration)'!='debug' And '$(Configuration)'!='release')" >
+      <HintPath>SDL_references\Sdl.LanguagePlatform.TranslationMemoryApi.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -322,7 +337,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'v2011_Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\debug\</OutputPath>
+    <OutputPath>bin\v2011_Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -330,7 +345,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'v2011_Release|AnyCPU' ">
-    <OutputPath>bin\debug\</OutputPath>
+    <OutputPath>bin\v2011_Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -340,7 +355,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'v2014_Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\debug\</OutputPath>
+    <OutputPath>bin\v2014_Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -348,7 +363,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'v2014_Release|AnyCPU' ">
-    <OutputPath>bin\debug\</OutputPath>
+    <OutputPath>bin\v2014_Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -358,7 +373,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'v2015_Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\debug\</OutputPath>
+    <OutputPath>bin\v2015_Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -366,7 +381,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'v2015_Release|AnyCPU'">
-    <OutputPath>bin\debug\</OutputPath>
+    <OutputPath>bin\v2015_Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -403,7 +418,19 @@
     <PreBuildEvent>
     </PreBuildEvent>
   </PropertyGroup>
-  <Import Project="..\packages\Sdl.Core.PluginFramework.Build.14.0.0\build\net45\Sdl.Core.PluginFramework.Build.targets" Condition="Exists('..\packages\Sdl.Core.PluginFramework.Build.14.0.0\build\net45\Sdl.Core.PluginFramework.Build.targets')" />
+  <Import Project="..\packages\Sdl.Core.PluginFramework.Build.14.0.0\build\net45\Sdl.Core.PluginFramework.Build.targets" Condition="('$(Configuration)'=='debug' Or '$(Configuration)'=='release') And Exists('..\packages\Sdl.Core.PluginFramework.Build.14.0.0\build\net45\Sdl.Core.PluginFramework.Build.targets')" />
+  <Import Project="$(MSBuildExtensionsPath)\SDL\SDLTradosStudio\12\Sdl.Core.PluginFramework.Build.targets" Condition="Exists('$(MSBuildExtensionsPath)\SDL\SDLTradosStudio\12\Sdl.Core.PluginFramework.Build.targets')" />
+  <Import Project="$(MSBuildExtensionsPath)\SDL\SDLTradosStudio\11\Sdl.Core.PluginFramework.Build.targets" Condition="('$(Configuration)'=='v2014_Debug' Or '$(Configuration)'=='v2014_Release') And Exists('$(MSBuildExtensionsPath)\SDL\SDLTradosStudio\11\Sdl.Core.PluginFramework.Build.targets')" />
+  <Import Project="$(MSBuildProjectDirectory)\ManifestUpdateFile.targets" />
+  <Import Project="$(MSBuildProjectDirectory)\ReferencesCopy.targets" />
+  <Import Project="$(MSBuildProjectDirectory)\ManifestCompress.targets" />
+  <Target Name="BeforeBuild">
+    <CopyReferences BuildVersion="$(ConfigurationName)" DestinationFolder="$(ProjectDir)\SDL_references\" Condition="('$(Configuration)'!='debug' And '$(Configuration)'!='release')" />
+  </Target>
+  <Target Name="AfterBuild" DependsOnTargets="GeneratePluginManifestTarget">
+    <UpdateManifest ManifestFile="$(ProjectDir)\pluginpackage.manifest.xml" BuildVersion="$(ConfigurationName)" />
+    <CompressManifest ManifestFile="$(ProjectDir)\pluginpackage.manifest.xml" PluginFile="$(OutDir)\$(ProjectName).sdlplugin" />
+  </Target>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
