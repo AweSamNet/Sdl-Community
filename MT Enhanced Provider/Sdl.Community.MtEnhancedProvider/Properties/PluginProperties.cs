@@ -1,6 +1,6 @@
 using Sdl.Core.PluginFramework;
 
-[assembly: Plugin("Plugin_Name")]
+[assembly: Plugin("MT Enhanced Provider (with 2014 Support)")]
 
 
 

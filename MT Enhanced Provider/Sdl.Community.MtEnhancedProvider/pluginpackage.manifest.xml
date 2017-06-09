@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PluginPackage xmlns="http://www.sdl.com/Plugins/PluginPackage/1.0">
-  <PlugInName>MT Enhanced Trados Plugin</PlugInName>
+  <PlugInName>MT Enhanced Trados (with 2014 Support)</PlugInName>
   <Version>1.6</Version>
-  <Description>MT Enhanced Trados Plugin</Description>
-  <Author>Sdl Community</Author>
+  <Description>MT Enhanced Trados (with 2014 Support)</Description>
+  <Author>Sdl Community, AweSam.Net</Author>
   <RequiredProduct name="SDLTradosStudio" minversion="11.0" maxversion="11.9" />
 </PluginPackage>
