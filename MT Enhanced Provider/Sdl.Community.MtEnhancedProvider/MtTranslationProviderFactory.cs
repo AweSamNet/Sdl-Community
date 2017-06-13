@@ -14,6 +14,7 @@
 
 using System;
 using Sdl.LanguagePlatform.TranslationMemoryApi;
+using AweSamNet.Integration.GitHubReleaseAutoUpdater;
 
 namespace Sdl.Community.MtEnhancedProvider
 {
@@ -21,7 +22,7 @@ namespace Sdl.Community.MtEnhancedProvider
     [TranslationProviderFactory(
         Id = "MtTranslationProviderFactory",
         Name = "MtTranslationProviderFactory",
-        Description = "MT Enhanced Trados Plugin")]
+        Description = "MT Enhanced Trados Plugin with Legacy Support")]
     #endregion
 
     public class MtTranslationProviderFactory : ITranslationProviderFactory
@@ -40,6 +41,13 @@ namespace Sdl.Community.MtEnhancedProvider
 
             //create options class based on URI passed to the method
             var loadOptions = new MtTranslationOptions(translationProviderUri);
+
+            // see if there is a plugin update here
+            if(loadOptions.EnablePluginAutoUpdate)
+            {
+                var pluginUpdater = new GitHubReleaseAutoUpdater(new MtPluginUpdaterProvider(loadOptions));
+                pluginUpdater.CheckLatestVersion();
+            }
 
             //start with MT...check if we are using MT
             if (loadOptions.SelectedProvider == MtTranslationOptions.ProviderType.MicrosoftTranslator)

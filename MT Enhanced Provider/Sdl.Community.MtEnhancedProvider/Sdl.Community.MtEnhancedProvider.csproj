@@ -127,14 +127,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AweSamNet.Integration.GithubReleaseAutoUpdater">
+      <HintPath>..\packages\AweSamNet.Integration.GithubReleaseAutoUpdater.1.0.0\lib\net452\AweSamNet.Integration.GithubReleaseAutoUpdater.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Octokit, Version=0.24.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Octokit.0.24.0\lib\net45\Octokit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="PresentationFramework">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="Sdl.Core.Globalization" Condition="('$(Configuration)'=='debug' Or '$(Configuration)'=='release')" >
+    <Reference Include="Sdl.Core.Globalization" Condition="('$(Configuration)'=='debug' Or '$(Configuration)'=='release')">
       <HintPath>C:\Program Files (x86)\SDL\SDL Trados Studio\Studio4\Sdl.Core.Globalization.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sdl.Core.Globalization" Condition="('$(Configuration)'!='debug' And '$(Configuration)'!='release')" >
+    <Reference Include="Sdl.Core.Globalization" Condition="('$(Configuration)'!='debug' And '$(Configuration)'!='release')">
       <HintPath>SDL_references\Sdl.Core.Globalization.dll</HintPath>
     </Reference>
     <Reference Include="Sdl.Core.PluginFramework, Version=1.8.0.0, Culture=neutral, PublicKeyToken=c28cdb26c445c888, processorArchitecture=MSIL" Condition="('$(Configuration)'=='debug' Or '$(Configuration)'=='release')">
@@ -148,25 +160,25 @@
     <Reference Include="Sdl.Core.PluginFramework" Condition="('$(Configuration)'!='debug' And '$(Configuration)'!='release')">
       <HintPath>SDL_references\Sdl.Core.PluginFramework.dll</HintPath>
     </Reference>
-    <Reference Include="Sdl.LanguagePlatform.Core" Condition="('$(Configuration)'=='debug' Or '$(Configuration)'=='release')" >
+    <Reference Include="Sdl.LanguagePlatform.Core" Condition="('$(Configuration)'=='debug' Or '$(Configuration)'=='release')">
       <HintPath>C:\Program Files (x86)\SDL\SDL Trados Studio\Studio4\Sdl.LanguagePlatform.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sdl.LanguagePlatform.Core" Condition="('$(Configuration)'!='debug' And '$(Configuration)'!='release')" >
+    <Reference Include="Sdl.LanguagePlatform.Core" Condition="('$(Configuration)'!='debug' And '$(Configuration)'!='release')">
       <HintPath>SDL_references\Sdl.LanguagePlatform.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Sdl.LanguagePlatform.TranslationMemory" Condition="('$(Configuration)'=='debug' Or '$(Configuration)'=='release')" >
+    <Reference Include="Sdl.LanguagePlatform.TranslationMemory" Condition="('$(Configuration)'=='debug' Or '$(Configuration)'=='release')">
       <HintPath>C:\Program Files (x86)\SDL\SDL Trados Studio\Studio4\Sdl.LanguagePlatform.TranslationMemory.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sdl.LanguagePlatform.TranslationMemory" Condition="('$(Configuration)'!='debug' And '$(Configuration)'!='release')" >
+    <Reference Include="Sdl.LanguagePlatform.TranslationMemory" Condition="('$(Configuration)'!='debug' And '$(Configuration)'!='release')">
       <HintPath>SDL_references\Sdl.LanguagePlatform.TranslationMemory.dll</HintPath>
     </Reference>
-    <Reference Include="Sdl.LanguagePlatform.TranslationMemoryApi" Condition="('$(Configuration)'=='debug' Or '$(Configuration)'=='release')" >
+    <Reference Include="Sdl.LanguagePlatform.TranslationMemoryApi" Condition="('$(Configuration)'=='debug' Or '$(Configuration)'=='release')">
       <HintPath>C:\Program Files (x86)\SDL\SDL Trados Studio\Studio4\Sdl.LanguagePlatform.TranslationMemoryApi.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sdl.LanguagePlatform.TranslationMemoryApi" Condition="('$(Configuration)'!='debug' And '$(Configuration)'!='release')" >
+    <Reference Include="Sdl.LanguagePlatform.TranslationMemoryApi" Condition="('$(Configuration)'!='debug' And '$(Configuration)'!='release')">
       <HintPath>SDL_references\Sdl.LanguagePlatform.TranslationMemoryApi.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -174,7 +186,9 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Runtime.Serialization">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
@@ -182,7 +196,9 @@
     <Reference Include="System.ServiceModel.Web">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Web" />
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Extensions">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -197,6 +213,19 @@
   <ItemGroup>
     <Compile Include="EditCollection.cs" />
     <Compile Include="MstConnect\ApiConnecter.cs" />
+    <Compile Include="MtPluginDownloadSuccessful.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MtPluginDownloadSuccessful.Designer.cs">
+      <DependentUpon>MtPluginDownloadSuccessful.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MtPluginUpdateAvailableDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MtPluginUpdateAvailableDialog.Designer.cs">
+      <DependentUpon>MtPluginUpdateAvailableDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MtPluginUpdaterProvider.cs" />
     <Compile Include="MtProviderConfDialogResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -233,6 +262,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="current.version">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Service References\TranslatorService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
@@ -240,6 +272,12 @@
     </None>
     <None Include="Service References\TranslatorService\configuration.svcinfo" />
     <None Include="Service References\TranslatorService\configuration91.svcinfo" />
+    <EmbeddedResource Include="MtPluginDownloadSuccessful.resx">
+      <DependentUpon>MtPluginDownloadSuccessful.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MtPluginUpdateAvailableDialog.resx">
+      <DependentUpon>MtPluginUpdateAvailableDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PluginResources.resx">
       <SubType>Designer</SubType>
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -436,5 +474,7 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Sdl.Core.PluginFramework.Build.14.0.0\build\net45\Sdl.Core.PluginFramework.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Sdl.Core.PluginFramework.Build.14.0.0\build\net45\Sdl.Core.PluginFramework.Build.targets'))" />
+    <Error Condition="!Exists('..\packages\StrongNamer.0.0.5\build\StrongNamer.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\StrongNamer.0.0.5\build\StrongNamer.targets'))" />
   </Target>
+  <Import Project="..\packages\StrongNamer.0.0.5\build\StrongNamer.targets" Condition="Exists('..\packages\StrongNamer.0.0.5\build\StrongNamer.targets')" />
 </Project>

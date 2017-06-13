@@ -25,7 +25,7 @@ namespace Sdl.Community.MtEnhancedProvider
         /// This string needs to be a unique value.
         /// It is the string that precedes the plug-in URI.
         ///</summary>    
-        public static readonly string ListTranslationProviderScheme = "mtenhancedprovider";
+        public static readonly string ListTranslationProviderScheme = "mtenhancedlegacyprovider";
         private MtTranslationProviderGTApiConnecter gtConnect;
         private ApiConnecter mstConnect;
 

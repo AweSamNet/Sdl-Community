@@ -215,6 +215,23 @@ namespace Sdl.Community.MtEnhancedProvider
             set { SetStringParameter("catid", value); }
         }
 
+        public string LatestSkippedVersion
+        {
+            get { return GetStringParameter("latestskippedversion"); }
+            set { SetStringParameter("latestskippedversion", value); }
+        }
+
+        public bool EnablePluginAutoUpdate
+        {
+            get
+            {
+                var value = GetStringParameter("enablepluginautoupdate");
+                if (string.IsNullOrWhiteSpace(value)) return true;
+
+                return Convert.ToBoolean(value);
+            }
+            set { SetStringParameter("enablepluginautoupdate", value.ToString()); }
+        }
 
         #region "SetStringParameter"
         private void SetStringParameter(string p, string value)

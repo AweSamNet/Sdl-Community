@@ -17,6 +17,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using Sdl.LanguagePlatform.TranslationMemoryApi;
+using AweSamNet.Integration.GitHubReleaseAutoUpdater;
 
 namespace Sdl.Community.MtEnhancedProvider
 {
@@ -111,7 +112,6 @@ namespace Sdl.Community.MtEnhancedProvider
             chkUsePostEdit.Checked = Options.UsePostEdit;
             txtPreEditFileName.Text = Options.PreLookupFilename;
             txtPostEditFileName.Text = Options.PostLookupFilename;
-
 
             //enable/disable controls
             groupBoxPostedit.Enabled = chkUsePostEdit.Checked;
@@ -410,6 +410,18 @@ namespace Sdl.Community.MtEnhancedProvider
             }
         }
 
+        private void btn_checkForUpdates_Click(object sender, EventArgs e)
+        {
+            var pluginUpdater = new GitHubReleaseAutoUpdater(new MtPluginUpdaterProvider(this, Options));
 
+            var latest = pluginUpdater.GetLatestVersion().TagName;
+            if (pluginUpdater.GetCurrentVersion()?.TagName == latest)
+            {
+                MessageBox.Show("Your version of MT Enhanced is up to date.");
+                return;
+            }
+
+            pluginUpdater.CheckLatestVersion();
+        }
     }
 }

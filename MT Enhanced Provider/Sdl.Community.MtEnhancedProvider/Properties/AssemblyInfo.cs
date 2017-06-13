@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MT Enhanced Provider (with 2014 Support)")]
+[assembly: AssemblyTitle("MT Enhanced Provider with Legacy Support")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sdl Community, AweSam.Net")]
-[assembly: AssemblyProduct("MT Enhanced Provider (with 2014 Support)")]
+[assembly: AssemblyProduct("MT Enhanced Provider with Legacy Support")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

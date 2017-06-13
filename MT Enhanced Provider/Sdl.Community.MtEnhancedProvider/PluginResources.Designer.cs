@@ -289,7 +289,7 @@ namespace Sdl.Community.MtEnhancedProvider {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MT Enhanced Trados Plugin.
+        ///   Looks up a localized string similar to MT Enhanced Trados Plugin with Legacy Support.
         /// </summary>
         public static string Plugin_Name {
             get {
@@ -298,7 +298,7 @@ namespace Sdl.Community.MtEnhancedProvider {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MT Enhanced Trados Plugin.
+        ///   Looks up a localized string similar to MT Enhanced Trados Plugin with Legacy Support.
         /// </summary>
         public static string Plugin_NiceName {
             get {
