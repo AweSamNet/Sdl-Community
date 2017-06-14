@@ -75,7 +75,7 @@ namespace Sdl.Community.MtEnhancedProvider
 
         public void AfterDownload(string filePath)
         {
-            var dialog = new MtPluginDownloadSuccessful(filePath);
+            var dialog = new MtPluginDownloadSuccessfulDialog(filePath);
             var result = dialog.ShowDialog(Owner);
 
             if(result == DialogResult.OK)

@@ -70,6 +70,15 @@ namespace Sdl.Community.MtEnhancedProvider {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Check for updates.
+        /// </summary>
+        public static string btn_checkForUpdates_Text {
+            get {
+                return ResourceManager.GetString("btn_checkForUpdates_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &amp;OK.
         /// </summary>
         public static string btn_OK_Text {
@@ -499,6 +508,24 @@ namespace Sdl.Community.MtEnhancedProvider {
         public static string validationMessageNoProvider {
             get {
                 return ResourceManager.GetString("validationMessageNoProvider", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your version of MT Enhanced is up to date..
+        /// </summary>
+        public static string versionUpToDate {
+            get {
+                return ResourceManager.GetString("versionUpToDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Success!.
+        /// </summary>
+        public static string versionUpToDateCaption {
+            get {
+                return ResourceManager.GetString("versionUpToDateCaption", resourceCulture);
             }
         }
     }

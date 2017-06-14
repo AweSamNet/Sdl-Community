@@ -170,7 +170,8 @@ namespace Sdl.Community.MtEnhancedProvider
             this.lblClientID.Text = MtProviderConfDialogResources.lblClientID_Text;
             this.tabPage1.Text = MtProviderConfDialogResources.tabPage1_Text;
             this.tabPage3.Text = MtProviderConfDialogResources.tabPage3_Text;
-            
+            this.btn_checkForUpdates.Text = MtProviderConfDialogResources.btn_checkForUpdates_Text;
+
             //create multiline tooltip text from strings in form resource file
             string ttip = MtProviderConfDialogResources.KeyForm_SaveKeyTooltip1;
             ttip += System.Environment.NewLine + MtProviderConfDialogResources.KeyForm_SaveKeyTooltip2;
@@ -417,7 +418,7 @@ namespace Sdl.Community.MtEnhancedProvider
             var latest = pluginUpdater.GetLatestVersion().TagName;
             if (pluginUpdater.GetCurrentVersion()?.TagName == latest)
             {
-                MessageBox.Show("Your version of MT Enhanced is up to date.");
+                MessageBox.Show(MtProviderConfDialogResources.versionUpToDate, MtProviderConfDialogResources.versionUpToDateCaption);
                 return;
             }
 
