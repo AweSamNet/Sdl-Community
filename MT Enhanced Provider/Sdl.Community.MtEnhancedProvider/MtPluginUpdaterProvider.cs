@@ -70,6 +70,8 @@ namespace Sdl.Community.MtEnhancedProvider
             var dialog = new MtPluginUpdateAvailableDialog(currentVersion, latestVersion, releaseNotes);
             dialog.ShowDialog(Owner);
 
+            if (dialog.NewVersionOption == NewVersionOptions.RemindMeLater) Options.UpdateRemindMeLater = true;
+
             return dialog.NewVersionOption;
         }
 

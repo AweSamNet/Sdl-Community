@@ -27,6 +27,7 @@ namespace Sdl.Community.MtEnhancedProvider
         private static string _apiKey;
         private static string _clientsecret;
         private static string _clientid;
+        private static bool _remindMeLater;
         const string msTranslatorString = "Microsoft Translator"; //these strings should not be localized or changed and are therefore hard-coded as constants
         const string gTranslateString = "Google Translate"; //these strings should not be localized or changed and are therefore hard-coded as constants
         
@@ -231,6 +232,12 @@ namespace Sdl.Community.MtEnhancedProvider
                 return Convert.ToBoolean(value);
             }
             set { SetStringParameter("enablepluginautoupdate", value.ToString()); }
+        }
+
+        public bool UpdateRemindMeLater
+        {
+            get { return _remindMeLater; }
+            set { _remindMeLater = value; }
         }
 
         #region "SetStringParameter"

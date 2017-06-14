@@ -43,7 +43,7 @@ namespace Sdl.Community.MtEnhancedProvider
             var loadOptions = new MtTranslationOptions(translationProviderUri);
 
             // see if there is a plugin update here
-            if(loadOptions.EnablePluginAutoUpdate)
+            if(loadOptions.EnablePluginAutoUpdate && !loadOptions.UpdateRemindMeLater)
             {
                 var pluginUpdater = new GitHubReleaseAutoUpdater(new MtPluginUpdaterProvider(loadOptions));
                 pluginUpdater.CheckLatestVersion();

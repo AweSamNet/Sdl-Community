@@ -34,7 +34,6 @@ namespace Sdl.Community.MtEnhancedProvider
             lbl_latestVersion_label.Text = MtPluginUpdateAvailableDialogResources.lbl_latestVersion_label_Text;
             lbl_releaseNotes.Text = MtPluginUpdateAvailableDialogResources.lbl_releaseNotes_Text;
             btn_later.Text = MtPluginUpdateAvailableDialogResources.btn_later_Text;
-            btn_skip.Text = MtPluginUpdateAvailableDialogResources.btn_skip_Text;
             btn_update.Text = MtPluginUpdateAvailableDialogResources.btn_update_Text;
         }
 

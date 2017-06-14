@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_skip = new System.Windows.Forms.Button();
             this.btn_later = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.lbl_message = new System.Windows.Forms.Label();
@@ -40,22 +39,11 @@
             this.txt_releaseNotes = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btn_skip
-            // 
-            this.btn_skip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_skip.Location = new System.Drawing.Point(144, 301);
-            this.btn_skip.Name = "btn_skip";
-            this.btn_skip.Size = new System.Drawing.Size(95, 23);
-            this.btn_skip.TabIndex = 2;
-            this.btn_skip.Text = "Skip this version";
-            this.btn_skip.UseVisualStyleBackColor = true;
-            this.btn_skip.Click += new System.EventHandler(this.btn_skip_Click);
-            // 
             // btn_later
             // 
             this.btn_later.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_later.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_later.Location = new System.Drawing.Point(36, 301);
+            this.btn_later.Location = new System.Drawing.Point(137, 301);
             this.btn_later.Name = "btn_later";
             this.btn_later.Size = new System.Drawing.Size(102, 23);
             this.btn_later.TabIndex = 1;
@@ -158,7 +146,6 @@
             this.Controls.Add(this.lbl_message);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_later);
-            this.Controls.Add(this.btn_skip);
             this.MinimumSize = new System.Drawing.Size(375, 375);
             this.Name = "MtPluginUpdateAvailableDialog";
             this.ShowIcon = false;
@@ -171,8 +158,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_skip;
         private System.Windows.Forms.Button btn_later;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Label lbl_message;
