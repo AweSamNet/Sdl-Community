@@ -206,3 +206,8 @@ packaging/
 
 # FAKE temporary files
 .fake/
+/MT Enhanced Provider/Sdl.Community.MtEnhancedProvider/SDL_references/Sdl.Core.Globalization.dll
+/MT Enhanced Provider/Sdl.Community.MtEnhancedProvider/SDL_references/Sdl.Core.PluginFramework.dll
+/MT Enhanced Provider/Sdl.Community.MtEnhancedProvider/SDL_references/Sdl.LanguagePlatform.Core.dll
+/MT Enhanced Provider/Sdl.Community.MtEnhancedProvider/SDL_references/Sdl.LanguagePlatform.TranslationMemory.dll
+/MT Enhanced Provider/Sdl.Community.MtEnhancedProvider/SDL_references/Sdl.LanguagePlatform.TranslationMemoryApi.dll

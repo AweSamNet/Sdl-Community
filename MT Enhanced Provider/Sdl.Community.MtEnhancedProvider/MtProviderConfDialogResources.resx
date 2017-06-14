@@ -1169,4 +1169,13 @@
   <data name="lookupFileStructureCheckXmlProblemErrorMessage" xml:space="preserve">
     <value>There was a problem loading the file: '{0}'. Make sure the contents are properly-formatted XML according to the required specifications, which are described in the plugin's documentation.</value>
   </data>
+  <data name="btn_checkForUpdates_Text" xml:space="preserve">
+    <value>Check for updates</value>
+  </data>
+  <data name="versionUpToDate" xml:space="preserve">
+    <value>Your version of MT Enhanced is up to date.</value>
+  </data>
+  <data name="versionUpToDateCaption" xml:space="preserve">
+    <value>Success!</value>
+  </data>
 </root>

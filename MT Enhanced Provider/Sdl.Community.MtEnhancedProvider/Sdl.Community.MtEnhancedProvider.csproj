@@ -127,8 +127,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AweSamNet.Integration.GithubReleaseAutoUpdater">
-      <HintPath>..\packages\AweSamNet.Integration.GithubReleaseAutoUpdater.1.0.0\lib\net452\AweSamNet.Integration.GithubReleaseAutoUpdater.dll</HintPath>
+    <Reference Include="AweSamNet.Integration.GithubReleaseAutoUpdater, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AweSamNet.Integration.GithubReleaseAutoUpdater.1.0.1\lib\net452\AweSamNet.Integration.GithubReleaseAutoUpdater.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -213,17 +213,27 @@
   <ItemGroup>
     <Compile Include="EditCollection.cs" />
     <Compile Include="MstConnect\ApiConnecter.cs" />
-    <Compile Include="MtPluginDownloadSuccessful.cs">
+    <Compile Include="MtPluginDownloadSuccessfulDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MtPluginDownloadSuccessful.Designer.cs">
-      <DependentUpon>MtPluginDownloadSuccessful.cs</DependentUpon>
+    <Compile Include="MtPluginDownloadSuccessfulDialog.Designer.cs">
+      <DependentUpon>MtPluginDownloadSuccessfulDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MtPluginDownloadSuccessfulDialogResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MtPluginDownloadSuccessfulDialogResources.resx</DependentUpon>
     </Compile>
     <Compile Include="MtPluginUpdateAvailableDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MtPluginUpdateAvailableDialog.Designer.cs">
       <DependentUpon>MtPluginUpdateAvailableDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MtPluginUpdateAvailableDialogResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MtPluginUpdateAvailableDialogResources.resx</DependentUpon>
     </Compile>
     <Compile Include="MtPluginUpdaterProvider.cs" />
     <Compile Include="MtProviderConfDialogResources.Designer.cs">
@@ -272,11 +282,19 @@
     </None>
     <None Include="Service References\TranslatorService\configuration.svcinfo" />
     <None Include="Service References\TranslatorService\configuration91.svcinfo" />
-    <EmbeddedResource Include="MtPluginDownloadSuccessful.resx">
-      <DependentUpon>MtPluginDownloadSuccessful.cs</DependentUpon>
+    <EmbeddedResource Include="MtPluginDownloadSuccessfulDialog.resx">
+      <DependentUpon>MtPluginDownloadSuccessfulDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MtPluginDownloadSuccessfulDialogResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MtPluginDownloadSuccessfulDialogResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="MtPluginUpdateAvailableDialog.resx">
       <DependentUpon>MtPluginUpdateAvailableDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MtPluginUpdateAvailableDialogResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MtPluginUpdateAvailableDialogResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="PluginResources.resx">
       <SubType>Designer</SubType>
@@ -474,7 +492,7 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Sdl.Core.PluginFramework.Build.14.0.0\build\net45\Sdl.Core.PluginFramework.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Sdl.Core.PluginFramework.Build.14.0.0\build\net45\Sdl.Core.PluginFramework.Build.targets'))" />
-    <Error Condition="!Exists('..\packages\StrongNamer.0.0.5\build\StrongNamer.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\StrongNamer.0.0.5\build\StrongNamer.targets'))" />
+    <Error Condition="!Exists('..\packages\StrongNamer.For.MsBuild12.1.0.27\build\StrongNamer.For.MsBuild12.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\StrongNamer.For.MsBuild12.1.0.27\build\StrongNamer.For.MsBuild12.targets'))" />
   </Target>
-  <Import Project="..\packages\StrongNamer.0.0.5\build\StrongNamer.targets" Condition="Exists('..\packages\StrongNamer.0.0.5\build\StrongNamer.targets')" />
+  <Import Project="..\packages\StrongNamer.For.MsBuild12.1.0.27\build\StrongNamer.For.MsBuild12.targets" Condition="Exists('..\packages\StrongNamer.For.MsBuild12.1.0.27\build\StrongNamer.For.MsBuild12.targets')" />
 </Project>
