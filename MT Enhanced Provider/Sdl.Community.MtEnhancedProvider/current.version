@@ -1,10 +1,6 @@
 ﻿[
   {
-    "TagName": "MTE2014_v1.6",
-    "AssetName": "Sdl.Community.MtEnhancedProvider.sdlplugin"
-  },
-  {
-    "TagName": "MTE2014_v1.6.1",
-    "AssetName": "Sdl.Community.MtEnhancedProvider.sdlplugin"
+    "TagName": "MTE_v1.0",
+    "AssetName": "AweSamNet.MtEnhancedProvider.sdlplugin"
   }
 ]

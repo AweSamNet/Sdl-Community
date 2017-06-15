@@ -465,7 +465,7 @@
     <RootNamespace>Sdl.Community.MtEnhancedProvider</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyName>Sdl.Community.MtEnhancedProvider</AssemblyName>
+    <AssemblyName>AweSamNet.MtEnhancedProvider</AssemblyName>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
