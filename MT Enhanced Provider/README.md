@@ -9,7 +9,8 @@ To see the latest changes you can [view all of our releases here](https://github
 ## Install
 1. Go [here](https://github.com/AweSamNet/Sdl-Community-Legacy-Support/releases) to find the latest (or older) version.
 2. Click the desired release's link ending in `.sdlplugin` to download the plugin.
-3. Use the SDL Installer tool to install to your version of SDL Trados Studio (Double clicking the file should do it if that is enabled).
+3. Use the SDL Plugin Installer tool to install to your version of SDL Trados Studio (Double clicking the file should do it if that is enabled).
+3.a If you already have another version of MT Enhanced installed you can use the SDL Plugin Installer to remove it.
 4. When selecting a Translation Memory, look for `MT Enhanced Trados Plugin with Legacy Support`
 5. Happy translating!
 
